@@ -1,0 +1,631 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: #fffafc;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+main {
+  flex: 1;
+}
+
+
+/* HEADER */
+/* HEADER */
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #EDD94C;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffd1dc;
+    padding: 10px 20px;
+    color: withe;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #8B8000;
+    text-decoration: none;
+}
+
+/* LOGO */
+.logo img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+.header-right{
+  display: flex;
+  flex-direction: column; /* pone cosas abajo */
+  align-items: center;
+  gap: 10px;
+}
+
+.iconos{
+  display: flex;
+  gap: 15px;
+}
+
+
+
+
+
+
+.icono-nav {
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.icono-nav:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/* BANNER */
+.heroo {
+    position: relative;
+    height: 400px;
+
+    background-image: url("../img/cristabor2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Capa difuminada */
+.heroo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../img/maquillaje1.png");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);          /* 🔥 difuminado */
+    transform: scale(1.1);      /* evita bordes feos */
+}
+
+/* Capa oscura */
+.heroo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* 🔥 oscurece */
+}
+
+/* Texto encima */
+.heroo-content {
+    position: relative;
+    z-index: 2;
+    color: #EDD94C;
+}
+
+.heroo-content h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.heroo-content p {
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+
+
+
+
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px;
+  background: linear-gradient(#ffd1dc, #fff);
+}
+
+.btn {
+  background: #fff3a3;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+/* PRODUCTOS */
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background: #FFFFCC;
+  cursor: pointer;
+}
+
+.card {
+  background: #F6DBD8;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* fijo en 4 columnas */
+  gap: 20px;
+  padding: 30px;
+}
+
+
+
+
+
+
+
+/*Carta de informacion de index*/
+.gridd {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));  
+  gap: 20px;
+  padding: 30px;
+}
+.cardd {
+  background: #F6DBD8;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+
+
+
+/* TABLA */
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+.hamburger {
+  display: none;
+}
+
+@media(max-width:768px){
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+  nav.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+
+/* ========================= */
+/* RESPONSIVE CELULARES */
+/* ========================= */
+
+@media screen and (max-width: 768px){
+
+/* HEADER */
+.header{
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+.logo img{
+    height: 80px;
+}
+
+/* MENU */
+#menu{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #ffd1dc;
+    padding: 10px 0;
+}
+
+#menu.active{
+    display: flex;
+}
+
+#menu a{
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff5f8;
+}
+
+/* BOTON HAMBURGUESA */
+.hamburger{
+    display: block;
+    border: none;
+    background: #fff3f6;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* HEADER RIGHT */
+.header-right{
+    width: 100%;
+    align-items: center;
+}
+
+/* BUSCADOR */
+.header-right div:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#buscador{
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.header-right button{
+    padding: 10px;
+}
+
+/* HERO */
+.heroo{
+    height: 280px;
+    padding: 20px;
+}
+
+.heroo-content h1{
+    font-size: 30px;
+}
+
+.heroo-content p{
+    font-size: 16px;
+}
+
+/* PRODUCTOS */
+.grid{
+    grid-template-columns: 1fr;
+    padding: 15px;
+}
+
+.card{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* CARTAS INDEX */
+.gridd{
+    grid-template-columns: 1fr;
+    padding: 15px;
+}
+
+.cardd{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* TEXTOS */
+.titulo{
+    font-size: 28px;
+}
+
+.cardtexto{
+    padding: 18px;
+}
+
+/* TABLAS */
+table{
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+/* PERFIL */
+.perfil-container{
+    width: 90%;
+    padding: 20px;
+}
+
+/* FOOTER */
+.footer-container{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-section{
+    margin: 0;
+}
+
+/* BOTONES */
+.btn{
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+}
+
+/* ICONOS */
+.iconos{
+    justify-content: center;
+}
+
+/* INPUTS */
+.perfil-container input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PERFIL */
+.perfil-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.perfil-container img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.perfil-container h2 {
+  margin: 10px 0;
+}
+
+.perfil-container p {
+  color: #666;
+}
+
+
+/* FOOTER */
+footer {
+  background: #ffd1dc;
+  padding: 25px 40px;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*TEXTO OBJETIVOS*/
+.info {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.titulo {
+  font-size: 42px;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #ffe082;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.cardtexto {
+  background: #F6DBD8;
+  margin: 25px 0;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+.grit {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pequeño {
+  width: 250px;
+}
+
+.pequeño h3 {
+  color: #444;
+}
+
+
+
+
+
+
+
+
+.perfil-container input {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+
+
+
+.insta-icon{
+  width: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}

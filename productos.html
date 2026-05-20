@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+      <img src="img/littlelogo.png" alt="Liitle Shop">
+  </div>
+
+<nav id="menu">
+  <a href="index.html">Inicio</a>
+  <a href="informacion.html">Información</a>
+  <a href="productos.html">Productos</a>
+</nav>
+
+<div class="header-right">
+
+  <div>
+    <input type="text" id="buscador" placeholder="Buscar...">
+    <button onclick="buscar()">🔍</button>
+  </div>
+
+  <div class="iconos">
+    <a href="carrito.html" class="icono-nav">🛒</a>
+    <a href="perfil.html" class="icono-nav">👤</a>
+  </div>
+
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+</div>
+</header>
+
+
+<!--TITULO-->
+<main>
+<h1 class="titulo">Nuestros Productos</h1>
+
+
+
+
+<!--PRODUCTOS-->
+<div class="grid">
+
+  <div class="card producto">
+    <img src="img/rubor1.png">
+    <h3>Rubor Rosé</h3>
+    <p>Un tono clásico y elegante que imita el color natural de las mejillas cuando sonríes. Su acabado natural y suave, aportando un respaldo saludable y luminoso que dura todo el día. Ideal para looks diarios y maquillaje "no makeup".</p>
+    <span>$120</span>
+    <button onclick="agregarCarrito('Rubor Rosé',120, 'img/rubor1.png','Acabado natural')">Agregar</button>
+  </div>
+
+  <div class="card producto">
+    <img src="img/rubor2.png">
+    <h3>Rubor Soft</h3>
+    <p>Un tono delicado y aterciopelado que define y moldea tu rostro con sutileza. Su textura es increible suave y se difumina perfectamente, crenao un efecto aireado y fresco. Perfecto para dar dimensión sin sobrecargar el maquillaje.</p>
+    <span>$150</span>
+    <button onclick="agregarCarrito('Rubor Soft',150, 'img/rubor2.png', 'Define tu rostro')">Agregar</button>
+  </div>
+
+  <div class="card producto">
+    <img src="img/rubor3.png">
+    <h3>Rubor Peach</h3>
+    <p>El color de la juventud y la energía. Este tono melocotón cálido aporta vida y frescura instantánea a tu rostro. Tiene un acabado luminoso que ilumina el semblante, siendo ideal para pieles claras y medianas ¡Te hará ver descansada y radiante!.</p>
+    <span>$130</span>
+    <button onclick="agregarCarrito('Rubor Peach',130, 'img/rubor3.png','Aporta vida y frescura')">Agregar</button>
+  </div>
+
+  <div class="card producto">
+    <img src="img/rubor4.png">
+    <h3>Rubor Lila Espacial</h3>
+    <p>Un tono único y vanguardista con matices malvas y rosados profundos. Aporta un acabado sofisticado y moderno que realza la belleza de las pieles morenas y oliva. Su fórmula compacta y elegante lo convierte en un producto exclusivo y de alta gama.</p>
+    <span>$145</span>
+    <button onclick="agregarCarrito('Rubor Lila Espacial',145,'img/rubor4.png','Acabado sofisticado y moderno')">Agregar</button>
+  </div>
+    
+</div>
+
+<!--PRODUCTOS SEGUNDA SECCION-->
+<div class="grid">
+
+  <div class="card producto">
+    <img src="img/contorno1.png">
+    <h3>Contorno High</h3>
+    <p>Un tono marrón y cálido diseñado para esculpir y definir tus rasgos con naturalidad. Su textura cremosa y fácil de difuminar permite crear sombras realistas, marcando pómulos, mandibula y nariz. Perfecto para lograr un efecto "lift" y un rostro con estructura y personalidad.</p>
+    <span>$120</span>
+    <button onclick="agregarCarrito('Contorno High',120, 'img/contorno1.png','Define tus rasgos')">Agregar</button>
+  </div>
+
+  <div class="card producto">
+    <img src="img/contorno3.png">
+    <h3>Contorno Two Tones</h3>
+    <p>Una paleta versátil con dos tonos complementarios: uno más oscuro para definir y uno más claro para iluminar. Combina acabados mate y satinados que te permite esculpir, resaltar y dar profundidad en un solo paso. Ideal para crear looks completos, desde lo más sutil hasta lo  más dramatico.</p>
+    <span>$150</span>
+    <button onclick="agregarCarrito('Contorno Two Tones',150,'img/contorno3.png','Esculpir, resaltar y dar profundidad')">Agregar</button>
+  </div>
+
+    
+</div>
+</main>
+
+
+
+
+    
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>Little Star ✨</h4>
+      <p>Maquillaje en tonos pastel que resalta tu belleza natural.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Redes sociales</h4>
+    <a href="https://www.instagram.com/littlestar00392?igsh=MjZkMzhodzhxejF5" target="_blank">
+     <img src="img/instagram.png" class="insta-icon">
+     Instagram
+    </a>     
+    </div>
+
+    <div class="footer-section">
+      <h4>Contacto</h4>
+        <a href="mailto:littlestar@gmail.com"target="_blank">Enviar correo</a>
+      <p>Tel: 55 5555 5555</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Little Star - Todos los derechos reservados
+  </div>
+</footer>
+
+
+
+
+    
+<script src="js/script.js"></script>
+</body>
+</html>
